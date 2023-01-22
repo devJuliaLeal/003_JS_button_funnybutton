@@ -14,5 +14,11 @@ simButton.addEventListener('click', () => {
 document.addEventListener('mousemove', (e) => {
     const x = e.pageX
     const y = e.pageY
-    console.log(x,y)
+    const buttonBox = evilButton.getBoundingClientRect()
+    console.log(buttonBox.x, buttonBox.y)
+    console.log(distanceFromCenter(buttonBox.x, buttonBox.y))
 })
+
+function distanceFromCenter(boxPosition, mousePosition, boxSize) {
+    return boxPosition - mousePosition + boxSize / 2 
+}
