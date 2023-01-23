@@ -7,10 +7,10 @@ evilButton.addEventListener('click' , () => {
     window.close()
 })
 
-/*simButton.addEventListener('click', () => {
+simButton.addEventListener('click', () => {
     alert('Eu também te amo')
 
-})*/
+})
 
 document.addEventListener('mousemove', (e) => {
     const x = e.pageX
