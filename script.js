@@ -1,4 +1,5 @@
 const evilButton = document.getElementById('evil-button')
+const OFFSET =100
 const simButton =document.getElementById('sim-button')
 
 evilButton.addEventListener('click' , () => {
@@ -6,17 +7,26 @@ evilButton.addEventListener('click' , () => {
     window.close()
 })
 
-simButton.addEventListener('click', () => {
+/*simButton.addEventListener('click', () => {
     alert('Eu também te amo')
 
-})
+})*/
 
 document.addEventListener('mousemove', (e) => {
     const x = e.pageX
     const y = e.pageY
     const buttonBox = evilButton.getBoundingClientRect()
-    console.log(buttonBox.x, buttonBox.y)
-    console.log(distanceFromCenter(buttonBox.x, buttonBox.y))
+    const verticalDistanceFrom= distanceFromCenter(buttonBox.x, x, buttonBox.width)
+    const horizontalDistanceFrom= distanceFromCenter(buttonBox.y,y, buttonBox.width)
+    const horizontalOffset = buttonBox.width/2 + OFFSET
+    const verticalOffset = buttonBox.height/2 + OFFSET
+    if (Math.abs(horizontalDistanceFrom)<= horizontalOffset && Math.abs(verticalDistanceFrom)<= verticalOffset)
+    setButtonPosition(
+        buttonBox.x + horizontalOffset/ horizontalDistanceFrom
+    )
+
+
+
 })
 
 function distanceFromCenter(boxPosition, mousePosition, boxSize) {
