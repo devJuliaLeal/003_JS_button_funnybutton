@@ -3,10 +3,11 @@ body{
     width: 100vw;
     height: 100vw;
     overflow: hidden;
+   background-color: white;
 }
 
 #evil-button{
-    
+  
     position: absolute;
     top: 50%;
     bottom: 48%;
@@ -21,7 +22,7 @@ body{
 }
 
 #sim-button {
-
+    
     position: absolute;
     top: 50%;
     left: 40%;

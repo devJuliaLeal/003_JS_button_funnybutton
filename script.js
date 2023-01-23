@@ -27,8 +27,8 @@ document.addEventListener('mousemove', (e) => {
      Math.abs(verticalDistanceFrom)<= verticalOffset)
     setButtonPosition (
 
-        buttonBox.x + horizontalOffset/ horizontalDistanceFrom*5 ,
-        buttonBox.y + verticalOffset/verticalDistanceFrom*5
+        buttonBox.x + horizontalOffset/ horizontalDistanceFrom*2 ,
+        buttonBox.y + verticalOffset/verticalDistanceFrom*2
     )
 
 
